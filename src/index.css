@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-paper text-gray-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-24;
+  }
+  
+  .btn {
+    @apply inline-block px-6 py-3 rounded-md font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-saffron-600 text-white hover:bg-saffron-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-navy-600 text-white hover:bg-navy-700;
+  }
+  
+  .timeline-item {
+    @apply relative pl-8 pb-12 border-l-2 border-gray-300 last:border-0 last:pb-0;
+  }
+  
+  .timeline-dot {
+    @apply absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-saffron-500;
+  }
+  
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 hover:scale-[1.02];
+  }
+  
+  .nav-link {
+    @apply text-gray-800 hover:text-saffron-600 px-3 py-2 text-sm font-medium;
+  }
+  
+  .nav-link-active {
+    @apply text-saffron-600;
+  }
+}
+
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 0.5rem;
+}
